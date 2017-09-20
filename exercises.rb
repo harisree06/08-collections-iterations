@@ -69,10 +69,42 @@ puts cities_population[:toronto]
 # I think Lady Gaga is great.
 # I think Pink Floyd is great.
 
-# (artists.length).times do
-#   puts "I think #{artists} is great."
-# end
-
 artists.each_with_index {|person,index|
   puts "I think #{artists[index]} is great.\n"
 }
+
+############ EXERCISE 3 #############
+
+# Print out the first two performing artists in that array.
+puts "The first two performing artists are #{artists[-2].upcase} and #{artists[-3].upcase}"
+
+# For each of your favourite movies, print out a sentence about when the movie was released. For example:
+
+movie_year.each do |key, value|
+   print "#{key} came out in #{value}\n"
+end
+
+####### FORMULA TO ACCESS THE KEYS AND VALUES IN A LOOP ###########
+# hash.keys.each_with_index do |key, index|
+#    value = hash[key]
+#    print "key: #{key}, value: #{value}, index: #{index}\n"
+#    # use key, value and index as desired
+# end
+
+# Sort and reverse the array of ages of your family. Save it and print it to the screen.
+puts age.sort.reverse
+
+# See if you can sort and reverse the array on one line!
+print age.sort.reverse
+
+# Add "Beauty and the Beast" movie to your hash of movies information, but with a twist: the movie was released both in 1991 and in 2017. Print it out.
+movie_year[:"Beauty and the Beast"] = 2017
+puts movie_year
+
+################ EXERCISE 4 ################
+#
+# Print out all of the ages of your friends/family that are less than 30 (or any number where some ages will not be printed!).
+# Find and output the age of the oldest person in your friends/family array.
+# Count how many times you flipped 'heads' using the coin flips array.
+# You realize one of the performing artists in your list is no longer a favourite. Remove one of them from the array.
+# Pick a city in your city population hash and change its population.
