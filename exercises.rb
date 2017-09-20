@@ -28,6 +28,8 @@ movie_year = {inception:'2010',IT:'2017',jurassic_park:'1993',mean_girls:'2003'}
 cities_population = {toronto: '5', tokyo: '36', new_york: '12'}
 people_ages = {cindy:'5',jessica:'10',michael:'15',john:'20',chris:'25'}
 
+############### EXERCISE 1 ###############
+
 # Print out the array of coin flips.
 puts coin_flip
 
@@ -43,6 +45,34 @@ age << '0'
 puts age.sort
 
 # Using the hash of movie information, access and print the year of one of the movies.
-puts The movie_year[:inception]
+puts movie_year[:inception]
 
 # If you haven't done so recently, now would be a good time to check that your code works and commit once it does.
+
+############### EXERCISE 2 ###############
+
+# Print out the last element of the array of your favourite colours.
+puts fav_colours[-1]
+# Note: this should work for an array of any size!
+
+# Add a new city to the hash of cities and population.
+cities_population[:london] = '18'
+
+# Reverse the array of coin flips and save it.
+puts coin_flip.reverse
+
+# Print out the population of one of the cities.
+puts cities_population[:toronto]
+
+# Print out a sentence about each item in the array of performing artists. For example:
+# I think Pearl Jam is great.
+# I think Lady Gaga is great.
+# I think Pink Floyd is great.
+
+# (artists.length).times do
+#   puts "I think #{artists} is great."
+# end
+
+artists.each_with_index {|person,index|
+  puts "I think #{artists[index]} is great.\n"
+}
