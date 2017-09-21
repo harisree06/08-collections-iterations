@@ -264,3 +264,50 @@ list_expenses = []
 end
 
 puts get_sum(list_expenses)
+
+puts "-------- EXERCISE 9 ---------"
+
+# We're going to make a shopping list by storing a few items in an array. Feel free to start with whatever items you like:
+
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+
+# Your next step should present your grocery list with an item on each line, with an asterisk (*) in front of it so that it appears like this:
+
+def total_item(grocery_list)
+  grocery_list.count
+end
+
+grocery_list.each do |food|
+  puts "*#{food}"
+end
+
+grocery_list << "rice"
+
+puts "\nCurrent food in the list"
+puts grocery_list
+
+# You lost count of how many things you need to pick up. Better output the total number of items on your list.
+puts "\nThe total number of foods in the grocery list is #{total_item(grocery_list)}."
+# You realize you've forgotten some rice, so add it to your list and output it again. Given that you've already output your list twice, it might be good to consider writing a method to do this. Putting frequently used chunks of code in a method lets you reuse them throughout your program without having to type them out over and over.
+
+# Check to see if your list includes "bananas". If it does, output "You need to pick up bananas". Otherwise, output "You don't need to pick up bananas today".
+
+puts "\nIs bananas in the grocery_list?"
+puts "#{grocery_list.include?("bananas")}"
+
+# Display the second item in the list. (Don't forget that arrays indices start at zero!)
+puts "\nThe second item in the grocery list is #{grocery_list[1].upcase}."
+
+# It turns out that everything in this grocery store you're visiting is stored alphabetically, so to better plan out what you need to buy you should sort your grocery list and output it with asterisks again.
+puts "\nsorted grocery list"
+grocery_list.sort
+grocery_list.each do |food|
+  puts "*#{food}"
+end
+
+# After looking everywhere, you can't find the salmon. Delete it from your list and redisplay the list one last time.
+
+grocery_list.delete("salmon")
+puts "\nThe salmon is not around so let's remove it from the list"
+puts grocery_list
+# After you're done, be sure you have everything committed and pushed to your github repo.
