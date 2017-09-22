@@ -29,15 +29,11 @@ cohort_key(students)
 
 puts "\nThe classrooms have been expanded! Increase each cohort size by 5% and display the new results."
 
-def increase_size(students)
-  students.each do |cohort,class_size|
-    result = class_size*1.05
-    puts "#{cohort}: #{result}"
-  end
-end
-
 result = []
-increase_size(students)
+students.map do |cohort,class_size|
+  result = class_size*1.05
+  puts "#{cohort}: #{result}"
+end
 
 # Delete the 2nd cohort and redisplay the hash.
 
@@ -47,15 +43,12 @@ puts "#{students}"
 
 # BONUS: Calculate the total number of students across all cohorts using each and a variable to keep track of the total. Output the result.
 
-def total_number(students)
-  total_number = 0
-  students.each_value do|class_size|
-    total_number += class_size
-  end
-  puts "\nThe total number of students across all cohorts is: #{total_number}"
+total_number = 0
+students.each_value do|class_size|
+  total_number += class_size
 end
+puts "\nThe total number of students across all cohorts is: #{total_number}"
 
-total_number(students)
 
 # BONUS: Create another similar hash called staff and display it using the display method from above.
 

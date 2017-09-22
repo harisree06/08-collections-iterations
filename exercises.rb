@@ -170,11 +170,6 @@ more_movie_year = {
 
 }
 
-
-# 1999: The Matrix, Star Wars: Episode 1, The Mummy
-# 2009: Avatar, Star Trek, District 9
-# 2019: How to Train Your Dragon 3, Toy Story 4, Star Wars: Episode 9
-
 # Make a new array that contains each row of the buttons on a phone. Each row should be an array.
 # The rows on a phone are: 1 2 3, 4 5 6, 7 8 9, * 0 #
 phone_row = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
@@ -235,8 +230,9 @@ non_island = []
 country_description.each do |country|
 
   if country[:islands] == "no"
-    non_island += country[:islands]
+    non_island << country[:islands]
   end
+  puts non_island
 end
 
 puts "-------- EXERCISE 8 --------"
@@ -254,7 +250,7 @@ def get_sum(list_expenses)
   list_expenses.each do|value|
     sum += value
   end
-  puts "The total sum is #{sum}."
+  puts "The total sum is $#{sum.round(2)}."
 end
 
 # add 8 random expenses into an array
@@ -300,7 +296,7 @@ puts "\nThe second item in the grocery list is #{grocery_list[1].upcase}."
 
 # It turns out that everything in this grocery store you're visiting is stored alphabetically, so to better plan out what you need to buy you should sort your grocery list and output it with asterisks again.
 puts "\nsorted grocery list"
-grocery_list.sort
+grocery_list.sort!
 grocery_list.each do |food|
   puts "*#{food}"
 end
